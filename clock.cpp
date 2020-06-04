@@ -17,7 +17,7 @@ int main(int argc, char const *argv[]) {
     for(int i = 0; i < timer; i++) {
         time(&now);
         localtime_r(&now, &local_now);
-        strftime(now_string, time_buff, "Today is: %A %Y", &local_now);
+        strftime(now_string, time_buff, "%A, %B %d %Y, %H:%M:%S", &local_now);
         std::cout << "The current local time is: "
             << now_string
             << "\r"
